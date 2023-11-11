@@ -1,4 +1,4 @@
-import { User } from "../../../domain/entity/customer";
+import { User } from "../../../domain/entity/user";
 
 export interface UserRepositoryProviderPort {
     save(user: User): Promise<User>;

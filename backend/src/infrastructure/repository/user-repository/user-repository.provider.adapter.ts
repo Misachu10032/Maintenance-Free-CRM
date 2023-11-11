@@ -1,7 +1,7 @@
 
 import { injectable } from 'tsyringe';
 import {  UserRepositoryProviderPort } from './user-repository.provider.port';
-import { User } from '../../../domain/entity/customer';
+import { User } from '../../../domain/entity/user';
 
 @injectable()
 export class UserRepositoryProviderAdapter implements UserRepositoryProviderPort {

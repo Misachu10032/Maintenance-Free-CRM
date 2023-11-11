@@ -1,23 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column, Unique, ManyToOne, CreateDateColumn, OneToMany } from 'typeorm';
+import { DropInChange } from './dropInChange';
 
 
-@Entity()
-export class DropInChange {
-  @PrimaryGeneratedColumn()
-  id!: number;
 
-  @Column({ type: 'integer' })
-  numberAdded!: number;
-
-  @CreateDateColumn()
-  changeDate!: Date;
-
-  @Column({ type: 'varchar', length: 50 }) // Define the maximum length as per your type
-  type!: string;
-
-  @ManyToOne(() => User, (user: { dropInChanges: any; }) => user.dropInChanges)
-  user!: User;
-}
 
 @Entity()
 @Unique(['tag_number', 'phone','email'])
