@@ -18,4 +18,11 @@ export class UserRepositoryProviderAdapter implements UserRepositoryProviderPort
   async findByEmail(email: string): Promise<User | null> {
     return this.users.find((u) => u.email === email) || null;
   }
+
+
+  async UpdateUser(user: User): Promise<User> {
+  
+      return this.save(user);
+    }
+  
 }
