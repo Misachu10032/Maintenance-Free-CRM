@@ -16,6 +16,15 @@ export class UserServiceProviderAdapter implements UserServiceProviderPort {
     }
   }
 
+  async updateDropIn(customerData: User): Promise<void> {
+    try {
+      // You can add any business logic or validation here before creating the customer
+      await this.repository.createUser(customerData);
+    } catch (error) {
+      throw new Error('Failed to create a customer.');
+    }
+  }
+
 
   // Add more methods for managing customers as needed
 }
