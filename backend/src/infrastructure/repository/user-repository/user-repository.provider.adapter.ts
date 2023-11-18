@@ -20,7 +20,7 @@ export class UserRepositoryProviderAdapter implements UserRepositoryProviderPort
   }
 
 
-  async UpdateUser(user: User): Promise<User> {
+  async updateUser(user: User): Promise<User> {
   
       return this.save(user);
     }
