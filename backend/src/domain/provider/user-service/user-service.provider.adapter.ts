@@ -1,6 +1,6 @@
 // src/application/services/customerService.ts
 import { inject, injectable } from 'tsyringe';
-import { User } from '../../entity/customer';
+import { User } from '../../entity/user';
 import { UserServiceProviderPort } from './user-service.provider.port';
 import { UserRepositoryProviderPort } from '../../../infrastructure/repository/user-repository/user-repository.provider.port';
 
